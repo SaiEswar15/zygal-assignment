@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <div class = "app">
+        <h3>Select Date and Background Changer</h3>
+        <div>
+            <label for="month">Month : </label>
+            <select id="month">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <label for="year">Year : </label>
+            <input type="text" id="year">
+            <!-- <button onclick="displayDays()">Submit</button> -->
+        </div>
+        <div id="weeks-container"></div>
+        <div id="buttons-container"></div>
+
+        <div class = "date-picker">
+            <label for="highlight-number">Select Date : </label>
+            <input type="number" id="highlight-number">
+            <button onclick="updateDays()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    background-color: lightgrey;
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.app{
+    width : 60vw;
+    background-color: lightblue ;
+    border : 5px solid rgb(144, 185, 199);
+    border-radius: 20px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons-container {
+    width : 40vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+#weeks-container
+{
+    width : 40vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.week-btn{
+    background-color: rgb(205, 205, 204);
+    margin-top: 1rem;
+    border: 1px dotted grey;
+}
+
+.day-button {
+    margin: 5px;
+}
+
+.green-bg {
+    background-color: green;
+}
+
+.date-picker{
+    padding : 1rem;
+}
+
+#year:focus{
+    outline: none;
+}
+
+#highlight-number:focus{
+    outline: none;
+}
+
+#month:focus{
+    outline: none;
+}
+
