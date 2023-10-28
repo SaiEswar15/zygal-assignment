@@ -55,13 +55,10 @@ function getEndDayOfMonth(year, month) {
 
 const years = {};
 
-
-function updateDays() {
+function select1()
+{
     const month = parseInt(document.getElementById("month").value); //August
     const year = parseInt(document.getElementById("year").value); //2023
-    const daysInMonth = new Date(year, month, 0).getDate();
-    const highlightNumber = parseInt(document.getElementById("highlight-number").value); //23
-
      
     if(!years[year])
     {
@@ -74,12 +71,16 @@ function updateDays() {
         selectedYear[month] = {};  // 2023 : {August : {}}
     }  
     const selectedMonth = selectedYear[month]; 
-    
+    return selectedMonth;
+}
 
-    selectedMonth[highlightNumber] = !selectedMonth[highlightNumber];
+function populateButtons(selectedMonth)
+{
+    const month = parseInt(document.getElementById("month").value); //August
+    const year = parseInt(document.getElementById("year").value);
+    const daysInMonth = new Date(year, month, 0).getDate();
 
-    // console.log(years);
-    
+
     const weeksContainer = document.getElementById("weeks-container");
     weeksContainer.innerHTML = "";
 
@@ -109,5 +110,22 @@ function updateDays() {
         }
         buttonsContainer.appendChild(button);
     }
+}
+
+function displayDays()
+{
+    const selectedMonth = select1();
+    populateButtons(selectedMonth)
+}
+
+
+function updateDays() {
+    
+    const highlightNumber = parseInt(document.getElementById("highlight-number").value); //23
+
+    const selectedMonth = select1();
+    selectedMonth[highlightNumber] = !selectedMonth[highlightNumber];
+    populateButtons(selectedMonth)
+
 }
 
